@@ -1,0 +1,56 @@
+{
+  "name": "@solsonar/yellowstone-grpc-client",
+  "version": "0.1.0",
+  "description": "Production-ready Yellowstone gRPC (Geyser) client for Solana with TLS + x-token auth, ping/stale detection, exponential backoff reconnect, and live subscription updates.",
+  "keywords": [
+    "solana",
+    "yellowstone",
+    "geyser",
+    "grpc",
+    "triton",
+    "real-time",
+    "rpc",
+    "subscription",
+    "low-latency",
+    "mev"
+  ],
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/",
+    "lint": "node --check src/YellowstoneClient.js && node --check src/index.js",
+    "example:basic": "node examples/basic-subscribe.js",
+    "example:accounts": "node examples/account-watcher.js",
+    "example:transactions": "node examples/transaction-watcher.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@grpc/grpc-js": "^1.10.0",
+    "@triton-one/yellowstone-grpc": "1.4.0"
+  },
+  "devDependencies": {
+    "@grpc/grpc-js": "^1.10.0",
+    "@triton-one/yellowstone-grpc": "1.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solsonar/yellowstone-grpc-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/solsonar/yellowstone-grpc-client/issues"
+  },
+  "homepage": "https://github.com/solsonar/yellowstone-grpc-client#readme",
+  "author": "solsonar",
+  "license": "MIT"
+}
