@@ -147,6 +147,11 @@ See [`examples/`](./examples) for runnable scripts:
 - `account-watcher.js` — watch a list of accounts, decode amounts.
 - `transaction-watcher.js` — print txs touching given programs.
 
+## Pairs well with
+
+- [`@solsonar/solana-shred-parser`](https://www.npmjs.com/package/@solsonar/solana-shred-parser) — UDP shred listener that emits `VersionedTransaction`s tens of milliseconds before they reach the confirmed ledger. Use it when you need pre-confirmation latency that even Yellowstone cannot give you.
+- [`@solsonar/solana-alt-cache`](https://www.npmjs.com/package/@solsonar/solana-alt-cache) — synchronous Address Lookup Table cache for resolving full account lists from `VersionedTransaction.message`.
+
 ## Why pin `@triton-one/yellowstone-grpc` to 1.4.0?
 
 Newer versions of `@triton-one/yellowstone-grpc` removed the `dist/grpc/geyser` subpath and re-bundled the Geyser client behind a NAPI wrapper. The wrapper makes it harder to control the underlying gRPC channel — connection pooling, custom credentials, and per-message backpressure are all easier on the lower-level `GeyserClient` from 1.4.0. Production producers (e.g. Triton's own `sol-tracker-producer`) use the same setup. If you need a newer version, open an issue.
@@ -154,5 +159,3 @@ Newer versions of `@triton-one/yellowstone-grpc` removed the `dist/grpc/geyser` 
 ## License
 
 MIT
-# yellowstone-grpc-client
-# solana-alt-cache

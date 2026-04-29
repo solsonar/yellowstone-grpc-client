@@ -51,6 +51,9 @@
     "url": "https://github.com/solsonar/yellowstone-grpc-client/issues"
   },
   "homepage": "https://github.com/solsonar/yellowstone-grpc-client#readme",
-  "author": "solsonar",
-  "license": "MIT"
+  "author": "Andrija Vujović <vujovic.andrija.b@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
 }
